@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #000000;" VBox.vgrow="ALWAYS">
+            <children>
+            <Pane layoutX="-3.0" prefHeight="377.0" prefWidth="322.0" style="-fx-background-color: #1DB954;">
+               <children>
+                      <Label alignment="CENTER" layoutX="-70.0" layoutY="23.0" prefHeight="25.0" prefWidth="356.0" style="&#10;" text="WELCOME," textAlignment="CENTER" wrapText="false">
+                          <font>
+                              <Font name="System Bold" size="36.0" />
+                          </font>
+                      </Label>
+                      <Label fx:id="homeLabel" alignment="CENTER" layoutX="200.0" layoutY="23.0" prefHeight="43.0" prefWidth="108.0" style="&#10;" text="USER" textAlignment="CENTER" wrapText="false">
+                          <font>
+                              <Font name="System Bold" size="36.0" />
+                          </font>
+                      </Label>
+               </children>
+            </Pane>
+                <TableView fx:id="mytable" layoutX="320.0" layoutY="39.0" prefHeight="304.0" prefWidth="322.0">
+                    <columns>
+                        <TableColumn fx:id="usernamecol" prefWidth="75.0" text="username" />
+                        <TableColumn fx:id="passwordcol" prefWidth="75.0" text="password" />
+                        <TableColumn fx:id="accountcreatedcol" prefWidth="102.0" text="account created" />
+                        <TableColumn fx:id="statuscol" prefWidth="75.0" text="status" />
+                    </columns>
+                </TableView>
+                <Button fx:id="createButton" layoutX="46.0" layoutY="319.0" mnemonicParsing="false" onAction="#createuser" text="CREATE" />
+                <Button fx:id="updateButton" layoutX="125.0" layoutY="319.0" mnemonicParsing="false" onAction="#updateuser" text="UPDATE" />
+                <Button fx:id="deleteButton" layoutX="202.0" layoutY="319.0" mnemonicParsing="false" onAction="#deleteuser" text="DELETE" />
+                <TextField fx:id="nameTF" layoutX="108.0" layoutY="92.0" />
+                <TextField fx:id="passwordTF" layoutX="108.0" layoutY="161.0" />
+                <TextField fx:id="statusTF" layoutX="108.0" layoutY="226.0" />
+                <Label fx:id="nameLabel" layoutX="58.0" layoutY="96.0" text="NAME" />
+                <Label fx:id="passwordLabel" layoutX="31.0" layoutY="165.0" text="PASSWORD" />
+                <Label fx:id="statusLabel" layoutX="54.0" layoutY="230.0" text="STATUS" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
